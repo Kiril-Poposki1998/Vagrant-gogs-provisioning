@@ -1,0 +1,12 @@
+[Unit]
+Description=Gogs private git repo
+After=postgresql.service
+
+[Service]
+User=root
+Group=root
+WorkingDirectory=/root/gogs
+ExecStart=/root/gogs/gogs web
+
+[Install]
+WantedBy=multi-user.target
